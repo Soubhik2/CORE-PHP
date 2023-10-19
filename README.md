@@ -28,7 +28,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /CPHP/index.php [L]
 ```
 
-`.index.php`
+`index.php`
 ```bash
 $pass_url = 'CPHP';
 ```
