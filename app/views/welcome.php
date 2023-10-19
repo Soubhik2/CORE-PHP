@@ -16,7 +16,7 @@
             popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system,
             extensive prebuilt components, and powerful JavaScript plugins.</p>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <a href="" class="btn btn-primary btn-lg px-4 gap-3">Get Start<i class="bi bi-arrow-right-short"></i></a>
+            <a href="https://github.com/Soubhik2/CORE-PHP" class="btn btn-primary btn-lg px-4 gap-3">Get Start<i class="bi bi-arrow-right-short"></i></a>
         </div>
     </div>
     <h2 class="mt-5">Most used variables</h2>
