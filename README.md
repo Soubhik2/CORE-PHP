@@ -17,7 +17,7 @@ Fast download this and save in htdocs folder
 ### Change CPHP -> your folder name
 
 `.htaccess`
-```bash
+```
 Options -Indexes
 
 RewriteEngine On
@@ -29,7 +29,7 @@ RewriteRule . /CPHP/index.php [L]
 ```
 
 `index.php`
-```bash
+```php
 $pass_url = 'CPHP';
 ```
 
