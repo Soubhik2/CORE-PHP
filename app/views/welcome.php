@@ -1,6 +1,5 @@
-<?php require BASEPATH.'/app/db/_dbconnect.php' ?>
 <?php $page_name = 'welcome' ?>
-<?php require BASEPATH.'/app/util/header.php'; ?>
+<?php require 'util/header.php'; ?>
 
 <?php
     // echo BASEPATH;
@@ -23,12 +22,10 @@
     <ul class="list-group container">
         <li class="list-group-item">BASEPATH : <?= BASEPATH ?></li>
         <li class="list-group-item">BASEURL : <?= BASEURL ?></li>
-        <li class="list-group-item">$request : <?= $request ?></li>
-        <li class="list-group-item">$requests : <?php print_r($requests) ?></li>
         <li class="list-group-item">$viewDir : <?= $viewDir ?></li>
         <li class="list-group-item">$pass_url : <?= $pass_url ?></li>
     </ul>
 </div>
 
 
-<?php require BASEPATH.'/app/util/footer.php'; ?>
+<?php require 'util/footer.php'; ?>

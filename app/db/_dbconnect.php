@@ -1,4 +1,5 @@
 <?php
+    defined('BASEPATH') OR exit('No direct script access allowed');
     // connect your mysql data base here 
     $servername = 'localhost';
     $username = 'root';

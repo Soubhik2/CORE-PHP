@@ -11,7 +11,7 @@
           <a class="nav-link <?= ($page_name == 'welcome')?'active':'' ?>" aria-current="page" href="<?=BASEURL?>">Welcome</a> 
         </li>
         <li class="nav-item">
-          <a class="nav-link <?= ($page_name == 'test')?'active':'' ?>" href="<?=BASEURL?>test/test/10">Test</a>
+          <a class="nav-link <?= ($page_name == 'test')?'active':'' ?>" href="<?= $router=="AUTO"?BASEURL.'test':BASEURL.'test/product/10'?>">Test</a>
         </li>
       </ul>
     </div>

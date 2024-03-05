@@ -1,9 +1,13 @@
 <?php
-    $viewDir = '/app/views/';
-    $request = $_SERVER['REQUEST_URI'];
-    $request = str_replace("/$pass_url",'',$request);
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-    $requests = explode('/', $request);
 
-    require 'routers.php';
-?>
+// AUTO, MANUAL (recommend)
+$router = "AUTO";
+$default_page = "welcome";
+
+// development, deploy
+$project = "development";
+
+$viewDir = '/app/views/';
+$request = $_SERVER['REQUEST_URI'];
