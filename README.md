@@ -1,7 +1,7 @@
 
 # CORE-PHP
 
-This is CORE PHP custom template
+This is CORE PHP custom template.
 
 
 
@@ -12,30 +12,29 @@ This is CORE PHP custom template
 
 ## How to use ?
 
-Fast download this and save in htdocs folder
+Please download this file and save it in the 'htdocs' folder of your XAMPP installation.
 
-### Change CPHP -> your folder name
+### Then change `CPHP` to your `{folder}` name.
 
-`.htaccess`
+#### This is in your project folder first `.htaccess` file.
 ```
 Options -Indexes
 
 RewriteEngine On
-RewriteBase /CPHP/
+RewriteBase /CPHP/ <--- change here
 RewriteRule ^index\\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /CPHP/index.php [L]
+RewriteRule . /CPHP/index.php [L] <--- change here
 ```
 
-`index.php`
+#### And now change on `index.php`.
 ```php
 $pass_url = 'CPHP';
 ```
+### Now run your project.
 
 ## Environment Variables
-
-
 
 `BASEPATH`
 `BASEURL`
@@ -43,6 +42,13 @@ $pass_url = 'CPHP';
 `$requests`
 `$viewDir`
 `$pass_url`
+
+#### Those are very important variables.
+
+## Documentation
+
+### Configurations
+You can locate it in the configuration file of your project's app.
 
 
 ## Features
