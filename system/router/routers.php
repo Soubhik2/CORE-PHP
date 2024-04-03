@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-require_once "routes.php";
+require_once BASEPATH .'/app/config/routes.php';
 
 if ($router == "AUTO") {
     if ($request =='/' || $request == '') {

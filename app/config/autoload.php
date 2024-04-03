@@ -4,24 +4,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // *--*
 // Load Databases
 
-require_once BASEPATH .'/app/db/_dbconnect.php';
+require_once BASEPATH .'/app/config/database.php';
 
 // *--*
 // Basic Configration
 
 require_once BASEPATH .'/app/config/config.php';
 
-if ($project == "development") {
-    error_reporting(E_ERROR | E_PARSE);
-}
+require_once BASEPATH .'/system/core/project.php';
 
-if ($project == "deploy") {
-    error_reporting(0);
-    error_reporting(E_ERROR | E_PARSE);
-    ini_set('display_errors', 'Off');
-}
+require_once BASEPATH .'/system/core/core.php';
 
-$request = str_replace("/$pass_url",'',$request);
-$requests = explode('/', $request);
-
-require_once BASEPATH .'/app/config/routers.php';
+require_once BASEPATH .'/system/router/routers.php';
