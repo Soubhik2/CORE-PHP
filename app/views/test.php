@@ -15,17 +15,37 @@
 
     echo '<h1>new</h1>';
     echo '<pre>';
+
+    // SELECT * FROM `contact`
     // print_r($database->get('contact')->result());
+    // print_r('error: '.$database->error());
 
-    print_r($database->where('id >=', '1')->or_where('name <','Ram')->where('roll','game')->get('student'));
+    // SELECT * FROM `student` WHERE `id` >= '1' OR `name` < 'Ram' AND `roll` = 'game'
+    // print_r($database->where('id >=', '1')->or_where('name <','Ram')->where('roll','game')->get('student')->get_query());
 
+    // SELECT * FROM `student` WHERE `id` = '1' AND `name` = 'Ram'
     // $database->where('id', '1');
     // $database->where('name','Ram');
-    // print_r($database->get('student'));
+    // print_r($database->get('student')->get_query());
 
-    // print_r($database->where('id', '1')->or_where('name', 'game')->get('student'));
+    // SELECT * FROM `student` WHERE `id` = '1' OR `name` = 'game'
+    // print_r($database->where('id', '1')->or_where('name', 'game')->get('student')->get_query());
 
-    // print_r($database->get('student'));
+    // SELECT * FROM `student` WHERE `name` LIKE '%ram%' AND `open` = 'hello' OR `id` LIKE '%hh%'
+    // print_r($database->like('name','ram')->where('open', "hello")->or_like('id', 'hh')->get('student')->get_query());
+
+    // SELECT * FROM `student` WHERE `id` <= '3' AND `name` LIKE '%soubhik%'
+    // print_r($database->where('id <=','3')->like('name','soubhik')->get('student')->get_query());
+
+    // print_r($database->get('student')->count());
+
+    // INSERT DATA
+    $data = array(
+        'name' => 'GTA',
+        'city' => 'mars'
+    );
+    // print_r($database->insert('student', $data));
+    print_r($database->where('id', '24')->update('student', $data));
 
     echo '</pre>';
 

@@ -5,12 +5,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Runner {
     private $query;
     private $conn;
-    public function __construct($conn,$query) {
-        $this->conn = $conn;
+    private $context;
+    public function __construct($context, $query) {
+        $this->context = $context;
+        $this->conn = $context->conn();
         $this->query = $query;
     }
 
+    public function count(){
+        $result = $this->conn->query($this->query);
+        return $result->num_rows;
+    }
+
     public function result(){
+        // try {
+        //     $result = $this->conn->query($this->query);
+        // } catch (\Throwable $e) {
+        //     $this->context->seterror($e, 'mnxygfi');
+        //     return false;
+        // }
         $result = $this->conn->query($this->query);
         $arr = [];
 
@@ -53,5 +66,9 @@ class Runner {
         } else {
             return false;
         }
+    }
+
+    public function get_query(){
+        return $this->query;
     }
 }
