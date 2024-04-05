@@ -75,8 +75,7 @@ class Database {
 
     public function update($table, $data) {
         $length = count($data);
-        $query = "INSERT INTO $table SET ";
-        // $query = "INSERT INTO mytable (title, name, date) VALUES ('My title', 'My name', 'My date')";
+        $query = "UPDATE $table SET ";
 
         $query .= implode(', ', array_map(
             function ($k, $v) { return "$k = '$v'"; },
@@ -86,8 +85,15 @@ class Database {
         $query .= ' '; // `student`.`id`
         $query .= $this->subQuery;
         
-        return $query;
-        // return $this->conn->query($query);
+        // return $query;
+        return $this->conn->query($query);
+    }
+
+    public function delete($table) {
+        $query = "DELETE FROM $table ".$this->subQuery;
+        
+        // return $query;
+        return $this->conn->query($query);
     }
 
     public function where($col, $value){

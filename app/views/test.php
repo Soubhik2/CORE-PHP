@@ -10,12 +10,13 @@
 <?php
 
     echo '<pre>';
-    print_r($conn);
-    echo '</pre>';
+    // print_r($conn);
+    // echo '</pre>';
 
-    echo '<h1>new</h1>';
-    echo '<pre>';
+    // echo '<h1>new</h1>';
+    // echo '<pre>';
 
+    // --------------------------------------------------------------------------------------------------
     // SELECT * FROM `contact`
     // print_r($database->get('contact')->result());
     // print_r('error: '.$database->error());
@@ -39,30 +40,72 @@
 
     // print_r($database->get('student')->count());
 
-    // INSERT DATA
     $data = array(
-        'name' => 'GTA',
+        'name' => 'GTA V',
         'city' => 'mars'
     );
+    // INSERT DATA
     // print_r($database->insert('student', $data));
-    print_r($database->where('id', '24')->update('student', $data));
+    // UPDATE DATA
+    // print_r($database->where('id', '25')->update('student', $data));
+    // DELETE DATA
+    // print_r($database->where('id', '24')->delete('student'));
+    // --------------------------------------------------------------------------------------------------
 
     echo '</pre>';
 
-    echo '<h1>old</h1>';
-    $sql = "SELECT * FROM student";
-    $result = $conn->query($sql);
+    // echo '<h1>old</h1>';
+    // $sql = "SELECT * FROM student";
+    // $result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
-        // Output data of each row
-        while ($row = $result->fetch_assoc()) {
-            echo '<pre>';
-            print_r($row);
-            echo '</pre>';
-        }
-    } else {
-        echo "0 results";
-    }
+    // if ($result->num_rows > 0) {
+    //     // Output data of each row
+    //     while ($row = $result->fetch_assoc()) {
+    //         echo '<pre>';
+    //         print_r($row);
+    //         echo '</pre>';
+    //     }
+    // } else {
+    //     echo "0 results";
+    // }
+    // setcookie("user", "John", time() + (86400 * 30), "/"); // 86400 = 1 day
+    // SETCOOKIE
+    // $input->set_cookie("name1","hello");
+    echo '<pre>';
+    // print_r(htmlspecialchars($input->post('name', true)));
+    // print_r($input->post(null, true));
+    // print_r($input->get(null, true));
+    // print_r($input->cookie(null, true));
+    // print_r($_COOKIE);
+
+    // SESSION ----------------------------------------------------------
+    // print_r($session->set_userdata('name', 'game'));
+    // print_r($session->set_userdata($data));
+
+    // print_r($session->userdata('name'));
+    // print_r($session->has_userdata('name'));
+    
+    // $session->unset_userdata('name2');
+    // $session->unset_userdata(['name1','name2']);
+
+    // $session->destroy();
+    
+    // print_r($session);
+    // print_r($session->userdata());
+    
+    echo '</pre>';
+
+    // How to use
+    // if ($input->post('submit', true)) {
+    //     echo "submit";
+    //     print_r($input->post(null, true));
+    // }
+
 ?>
+
+<form method="post">
+    <input type="text" name="name" value="ram">
+    <button name="submit" value="1">submit</button>
+</form>
 
 <?php require 'util/footer.php'; ?>
