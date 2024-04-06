@@ -7,5 +7,7 @@ $autoload['session'] = true;
 
 $autoload['input'] = true;
 
+$autoload['auth'] = true;
+
 
 require_once BASEPATH .'/system/core/core.php';

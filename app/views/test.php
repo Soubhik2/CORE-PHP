@@ -28,6 +28,8 @@
     // $database->where('id', '1');
     // $database->where('name','Ram');
     // print_r($database->get('student')->get_query());
+    // print_r($database->get('student')->result());
+    // print_r($database->get('contact')->result());
 
     // SELECT * FROM `student` WHERE `id` = '1' OR `name` = 'game'
     // print_r($database->where('id', '1')->or_where('name', 'game')->get('student')->get_query());
@@ -101,11 +103,44 @@
     //     print_r($input->post(null, true));
     // }
 
+    $arr = [
+        "name"=>"soubhik",
+        "phone"=>"9000",
+    ];
+
+    // email: soubhik@gmail.com
+    // password: password@
+
+    $auth = new Auth($database);
+    // $auth = new Auth($database, 'game', 'user', 'pass');
+
+    // $auth->setTableName('game');
+    // $auth->setEmailName('user');
+    // $auth->setPasswordName('pass');
+
+    // print_r($result = $auth->signUp("soubhik@gmail.com", "password@", $arr));
+    // print_r($result = $auth->signUp("soubhik123", "password", $arr, false, false));
+    // print_r($result = $auth->signUp("soubhik123", "password", [], false, false));
+    // print_r($auth->signIn("soubhik@gmail.com", "password@"));
+    // echo $result->error_mess;
+
+    // $auth->logout();
+    // echo $auth->isLoggedin();
+    if ($auth->isLoggedin()) {
+        echo "YES";
+    } else {
+        echo "NO";
+    }
+    
+    echo '<pre>';
+    print_r($auth->getUser());
+    echo '</pre>';
+
 ?>
 
-<form method="post">
+<!-- <form method="post">
     <input type="text" name="name" value="ram">
     <button name="submit" value="1">submit</button>
-</form>
+</form> -->
 
 <?php require 'util/footer.php'; ?>

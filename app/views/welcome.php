@@ -7,6 +7,7 @@
     // echo BASEURL;
 ?>
 
+
 <div class="px-4 py-4 text-center">
     <img class="d-block mx-auto mb-4" src="<?= BASEURL ?>public/asset/php.png" alt="" width="100">
     <h1 class="display-5 fw-bold text-body-emphasis">WELCOME TO CORE PHP</h1>

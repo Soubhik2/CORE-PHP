@@ -6,7 +6,12 @@ class Session{
         session_start();
         foreach ($this->userdata() as $key => $value) {
             try {
-                eval('$this'."->$key = '$value';");
+                if (is_array($value) or is_object($value)) {
+                    $value = json_encode($value);
+                    eval('$this'."->$key = '$value';");
+                }else{
+                    eval('$this'."->$key = '$value';");
+                }
             } catch (\Throwable $th) {
                 //throw $th;
             }

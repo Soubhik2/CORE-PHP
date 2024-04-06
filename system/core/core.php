@@ -16,9 +16,16 @@ if (isset($autoload['database'])) {
 
 // *--*
 // Basic Configration
+
 if (isset($autoload['input'])) {
     if ($autoload['input']) {
         require_once BASEPATH .'/system/libraries/input.php';
+    }
+}
+
+if (isset($autoload['auth'])) {
+    if ($autoload['auth']) {
+        require_once BASEPATH .'/system/libraries/auth.php';
     }
 }
 

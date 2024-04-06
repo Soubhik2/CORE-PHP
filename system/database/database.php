@@ -43,6 +43,7 @@ class Database {
             $query .= " LIMIT $pre";
         }
         // return $query;
+        $this->subQuery = "";
         return new Runner($this, $query);
     }
 
