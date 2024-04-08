@@ -143,7 +143,7 @@ class Database {
     }
 
     public function query($query){
-        return new Runner($this->conn, $query);
+        return new Runner($this, $query);
     }
 
     public function conn(){

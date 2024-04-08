@@ -18,6 +18,7 @@
 
     // --------------------------------------------------------------------------------------------------
     // SELECT * FROM `contact`
+    // print_r($database->query('SELECT * FROM student')->result());
     // print_r($database->get('contact')->result());
     // print_r('error: '.$database->error());
 
