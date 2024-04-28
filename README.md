@@ -600,6 +600,7 @@ Initializing a Auth
 It's support email and password verify it's `return object("error"=>0, "error_mess"=>"", "error_code"=>"");`
 
 ```
+$autoload['auth'] = true; <- in the autoload.php
 $auth = new Auth($database);
 ```
 It's also support custom reference

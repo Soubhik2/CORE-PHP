@@ -1,13 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$autoload['database'] = true;
+$autoload['database'] = false;
 
-$autoload['session'] = true;
+$autoload['session'] = false;
 
-$autoload['input'] = true;
+$autoload['input'] = false;
 
-$autoload['auth'] = true;
+$autoload['auth'] = false;
 
 
 require_once BASEPATH .'/system/core/core.php';
