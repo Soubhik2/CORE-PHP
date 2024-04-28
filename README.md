@@ -17,6 +17,14 @@
 </div>
 
 ## 🛠️ Installation Steps
+### 1. Via Script Installation
+
+*Please download this python script and save it in the 'htdocs' folder of your XAMPP installation.*
+-> [cphp_initializr](https://mycode.freewebhostmost.com/downloads/cphp_initializr.py)
+
+*Now run this script  [__NOTE for run this script required `python` and `git` installed__]*
+
+### 2. Manually Installation
 
 *Please download this file and save it in the 'htdocs' folder of your XAMPP installation.*
 
