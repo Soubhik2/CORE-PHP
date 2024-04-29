@@ -6,3 +6,7 @@ RewriteRule ^index\\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /CPHP/index.php [L]
+
+ErrorDocument 403 /CPHP/403.html
+ErrorDocument 500 /CPHP/500.html
+php_flag display_errors on
