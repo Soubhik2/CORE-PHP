@@ -1,4 +1,4 @@
-<?php $page_name = 'welcome' ?>
+<?php $page_name = 'welcome'; ?>
 
 <!doctype html>
 <html lang="en">
@@ -34,6 +34,9 @@
         </ul>
     </div>
 
+    <?php
+      require 'name'
+    ?>
 
     <?php require 'util/footer.php'; ?>
 

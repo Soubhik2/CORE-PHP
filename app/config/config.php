@@ -6,8 +6,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $router = "AUTO";
 $default_page = "welcome";
 
-// development, deploy
-$project = "development";
-
 $viewDir = '/app/views/';
 $request = $_SERVER['REQUEST_URI'];
